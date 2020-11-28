@@ -16,7 +16,7 @@ var myMap = L.map("map", {
   
 // Store API query variables
 var baseURL = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
-var date = "$where=time between'2020-11-20T00:00:00' and '2020-11-27T00:00:00'";
+var date = "$where=time between'1605939415600' and '1605936214174'";
 var mag = "&mag=>1";
 var limit = "&$limit=10000";
 
@@ -33,13 +33,13 @@ d3.json(url, function(response) {
   for (var i = 0; i < response.length; i++) {
 
     // Set the data location property to a variable
-    var location = response[i].place;
+    var geometry = response[i].geometry;
 
     // Check for location property
-    if (location) {
+    if (geometry) {
 
       // Add a new marker to the cluster group and bind a pop-up
-      markers.addLayer(L.marker([location.coordinates[1], location.coordinates[0]])
+      markers.addLayer(L.marker([geometry.coordinates[1], geometry.coordinates[0]])
         .bindPopup(response[i].descriptor));
     }
 

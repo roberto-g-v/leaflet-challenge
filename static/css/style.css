@@ -1,10 +1,50 @@
-body {
-  padding: 0;
-  margin: 0;
-}
-
+/* set map, body, and html to 100% of the screen size */
 #map,
 body,
 html {
   height: 100%;
 }
+
+/* remove default margin and padding from body */
+.legend {
+  padding: 10px;
+  font-family: Sanchez, serif;
+  font-size: 8px;
+  font-weight: bold;
+  line-height: 18px;
+  color: gray;
+  background-color: white;
+  border-radius: 2px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.legend .null1 {
+  color: greenyellow;
+}
+
+.legend .soft2 {
+  color: green;
+}
+
+.legend .medium3 {
+  color: #f4ba48;
+}
+
+.legend .hard4 {
+  color: orange;
+}
+
+.legend .strong5 {
+  color: orangered;
+}
+
+.legend .hiper6 {
+  color: red;
+}
+
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
